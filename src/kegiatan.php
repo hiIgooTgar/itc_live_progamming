@@ -60,11 +60,10 @@ if (!isset($_SESSION['id_users'])) {
                                 <option <?= ($status == "Terlaksana") ? "selected" : "" ?> value="terlaksana">Terlaksana</option>
                                 <option <?= ($status == "Gagal") ? "selected" : "" ?> value="gagal">Gagal</option>
                             </select>
-                            <p><?= $data['status'] ?></p>
-                            <button name="ubahStatus" class="badge-ubah" type="submit">Submit</button>
+                            <button onclick="return confirm('Anda ingin mengubah status kegiatan?');" name="ubahStatus" class="badge-ubah" type="submit">Submit</button>
                         </form>
                         <div>
-                            <a class="badge-hapus" href="">Hapus</a>
+                            <a onclick="return confirm('Anda ingin menghapus data kegiatan?');" class="badge-hapus" href="./delete_kegiatan.php?id_kegiatan=<?= $data['id_kegiatan'] ?>">Hapus</a>
                         </div>
                     </div>
                 </div>
