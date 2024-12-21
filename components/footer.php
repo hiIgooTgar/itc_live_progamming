@@ -1,5 +1,5 @@
 <footer>
-    <p>&copy; ITC Live Progamming By Bug Busters | <span>
+    <p>ITC Live Progamming By Bug Busters | <span>
             <script>
                 document.write(new Date().getFullYear())
             </script>
