@@ -41,7 +41,7 @@ if (!isset($_SESSION['id_users'])) {
                 <div class="card">
                     <div class="list">
                         <h3><?= $data['nama_kegiatan'] ?></h3>
-                        <p>Tanggal Kegiatan : <?= date("d F Y", strtotime($data['tgl_kegiatan'])) ?></p>
+                        <p class="tgl">Tanggal Kegiatan : <?= date("d F Y", strtotime($data['tgl_kegiatan'])) ?></p>
                         <p class="deskripsi"><?= $data['deskripsi'] ?></p>
                         <?php if ($data['status'] == 'belum') { ?>
                             <p class="status_belum"><?= $data['status'] = "Belum" ?></p>
@@ -52,18 +52,16 @@ if (!isset($_SESSION['id_users'])) {
                         <?php } ?>
                     </div>
                     <div class="aksi">
-                        <form action="update_kegiatan.php" method="post">
-                            <input type="hidden" name="id_kegiatan">
+                        <form action="./update_kegiatan.php" method="post">
+                            <input type="hidden" name="id_kegiatan" value="<?= $data['id_kegiatan'] ?>">
+                            <?php $status = $data['status'] ?>
                             <select name="status" id="status">
-                                <?php if ($data['status'] == 'belum') { ?>
-                                    <option value="<?= $data['status'] ?>">Belum</option>
-                                <?php } else if ($data['status'] == 'terlaksana') { ?>
-                                    <option value="<?= $data['status'] ?>">Terlaksana</option>
-                                <?php } else if ($data['status'] == 'gagal') { ?>
-                                    <option value="<?= $data['status'] ?>">Gagal</option>
-                                <?php } ?>
+                                <option <?= ($status == "Belum") ? "selected" : "" ?> value="belum">Belum</option>
+                                <option <?= ($status == "Terlaksana") ? "selected" : "" ?> value="terlaksana">Terlaksana</option>
+                                <option <?= ($status == "Gagal") ? "selected" : "" ?> value="gagal">Gagal</option>
                             </select>
-                            <button name="addKegiatan" class="badge-ubah" type="submit">Submit</button>
+                            <p><?= $data['status'] ?></p>
+                            <button name="ubahStatus" class="badge-ubah" type="submit">Submit</button>
                         </form>
                         <div>
                             <a class="badge-hapus" href="">Hapus</a>

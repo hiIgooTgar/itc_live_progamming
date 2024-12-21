@@ -73,19 +73,42 @@
   border: 1px solid var(--primary);
   margin-bottom: 1.5rem;
   padding: 1rem;
-  justify-content: space-between;
+  gap: 1rem;
 }
 
-.row-kegiatan .right-col .card .deskripsi {
+.row-kegiatan .right-col .card .list {
+  flex: 1 1 calc(85% - 1rem);
+}
+
+.row-kegiatan .right-col .card .list .tgl {
+  margin: 0.5rem 0;
+}
+
+.row-kegiatan .right-col .card .list .deskripsi {
   margin: 0.5rem 0;
   background: #f5f5f5;
   padding: 0.6rem;
+  flex: 1 1 15%;
 }
 
 .row-kegiatan .right-col .card .aksi {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+}
+
+.row-kegiatan .right-col .card .aksi form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  background: #f5f5f5;
+  padding: 0.5rem;
+}
+
+.row-kegiatan .right-col .card .aksi form select {
+  display: inline-block;
+  padding: 0.2rem;
+  width: 100%;
 }
 
 .status_belum {
@@ -156,12 +179,14 @@
 
 .badge-ubah {
   display: inline-block;
-  padding: 0.3rem;
+  padding: 0.2rem;
   background: #f2ff00;
-  color: #fff;
-  font-size: 0.9rem;
+  color: #000;
+  font-size: 0.8rem;
   font-weight: 500;
   border-radius: 4px;
+  outline: none;
+  border: none;
 }
 
 /* style input */
