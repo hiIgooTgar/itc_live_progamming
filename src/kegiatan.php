@@ -1,4 +1,5 @@
-<?php include "../koneksi/config.php";
+<?php
+include "../koneksi/config.php";
 ?>
 <?php
 $title = "Kegiatan Do To List | ITC Live Progamming";
@@ -9,11 +10,33 @@ if (!isset($_SESSION['id_users'])) {
                 alert('Harap login dahulu');
                 window.location.href = '../login.php';
             </script>";
-} ?>
+}
+
+$id_users = $_SESSION['id_users'];
+$status_cari = isset($_GET['status']) ? $_GET['status'] : '0';
+
+$where_kegiatan = "WHERE id_users = '$id_users'";
+if ($status_cari !== '0') {
+    $where_kegiatan .= " AND status = '$status_cari'";
+}
+
+$query = mysqli_query($conn, "SELECT * FROM tbl_kegiatan $where_kegiatan ORDER BY id_kegiatan DESC");
+?>
+
 <div class="container">
+    <div class="search-col">
+        <form action="" method="get">
+            <select name="status" id="status" onchange="this.form.submit()">
+                <option value="0" <?= ($status_cari == '0') ? 'selected' : '' ?>>All</option>
+                <option value="belum" <?= ($status_cari == 'belum') ? 'selected' : '' ?>>Belum</option>
+                <option value="terlaksana" <?= ($status_cari == 'terlaksana') ? 'selected' : '' ?>>Terlaksana</option>
+                <option value="gagal" <?= ($status_cari == 'gagal') ? 'selected' : '' ?>>Gagal</option>
+            </select>
+        </form>
+    </div>
     <div class="row-kegiatan">
         <div class="left-col">
-            <h1 class="heading">Tambah Kegiatan </h1>
+            <h1 class="heading">Tambah Kegiatan</h1>
             <form action="./proces_add_kegiatan.php" method="post">
                 <div class="group-input">
                     <label for="nama_kegiatan">Nama Kegiatan</label>
@@ -33,8 +56,6 @@ if (!isset($_SESSION['id_users'])) {
         <div class="right-col">
             <h1 class="heading">Data Kegiatan</h1>
             <?php
-            $id_users = $_SESSION['id_users'];
-            $query = mysqli_query($conn, "SELECT * FROM tbl_kegiatan WHERE id_users = '$id_users' ORDER BY id_kegiatan DESC");
             if (mysqli_num_rows($query) <= 0) {
                 echo "<div class='kt-kosong'><h2>Data kegiatan kosong!</h2></div>";
             }

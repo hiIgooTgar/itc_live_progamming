@@ -100,11 +100,49 @@
 }
 
 /* kegiatan php end */
+.search-col {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: end;
+}
+
+.search-col select {
+  display: inline-block;
+  padding: 0.65rem 0.8rem;
+  outline: none;
+  border: 1px solid #000;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.search-col select:focus {
+  border: 1px solid var(--primary);
+}
+
+.search-col-heading {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-col-heading select {
+  display: inline-block;
+  padding: 0.65rem 0.8rem;
+  outline: none;
+  border: 1px solid #000;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.search-col-heading select:focus {
+  border: 1px solid var(--primary);
+}
+
 .row-kegiatan {
   display: grid;
   grid-template-columns: 35% calc(65% - 2rem);
   gap: 2rem;
-  margin: 4rem 0;
+  margin: 1rem 0 4rem;
 }
 
 .row-kegiatan .heading {
