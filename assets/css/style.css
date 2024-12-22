@@ -51,7 +51,53 @@
   height: 60dvh;
   background: #f5f5f5;
 }
+
+.home h1 {
+  font-size: 2rem;
+}
+
+.home h1 span {
+  color: var(--primary);
+}
 /* index php end */
+
+/* list kegiatan */
+.list-kegiatan {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+  padding: 3rem 5%;
+}
+
+.list-kegiatan .card {
+  display: flex;
+  width: 100%;
+  border: 1px solid var(--primary);
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.list-kegiatan .card .list {
+  flex: 1 1 calc(85% - 1rem);
+}
+
+.list-kegiatan .card .list .tgl {
+  margin: 0.5rem 0;
+}
+
+.list-kegiatan .card .list .deskripsi {
+  margin: 0.5rem 0;
+  background: #f5f5f5;
+  padding: 0.6rem;
+  flex: 1 1 15%;
+}
+
+.list-kegiatan .card .list .foot {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* kegiatan php end */
 .row-kegiatan {
@@ -150,6 +196,7 @@
   background: #f81717;
   color: #fff;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .btn-submit {
@@ -159,6 +206,7 @@
   color: #000;
   border-radius: 4px;
   border: 1px solid var(--primary);
+  cursor: pointer;
 }
 
 .btn-submit:hover {
@@ -175,6 +223,7 @@
   font-size: 0.9rem;
   font-weight: 500;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .badge-ubah {
@@ -187,6 +236,7 @@
   border-radius: 4px;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 /* style input */

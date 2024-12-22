@@ -15,15 +15,15 @@ if (!isset($_SESSION['id_users'])) {
             <form action="./proces_add_kegiatan.php" method="post">
                 <div class="group-input">
                     <label for="nama_kegiatan">Nama Kegiatan</label>
-                    <input type="text" name="nama_kegiatan" class="form-control" id="nama_kegiatan" autocomplete="off" required>
+                    <input autofocus type="text" name="nama_kegiatan" class="form-control" id="nama_kegiatan" autocomplete="off" required>
                 </div>
                 <div class="group-input">
                     <label for="tgl_kegiatan">Tanggal Kegiatan</label>
-                    <input type="date" name="tgl_kegiatan" class="form-control" id="tgl_kegiatan" autocomplete="off" required>
+                    <input type="date" value="<?= date('Y-m-d') ?>" name="tgl_kegiatan" class="form-control" id="tgl_kegiatan" autocomplete="off" required>
                 </div>
                 <div class="group-input">
                     <label for="deskripsi">Deskripsi</label>
-                    <textarea name="deskripsi" id="deskripsi" cols="30" rows="10"></textarea>
+                    <textarea name="deskripsi" id="deskripsi" cols="30" required rows="10"></textarea>
                 </div>
                 <button name="addKegiatan" class="btn-submit" type="submit">Submit</button>
             </form>
