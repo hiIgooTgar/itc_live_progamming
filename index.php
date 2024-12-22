@@ -18,25 +18,30 @@ if (!isset($_SESSION['id_users'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home DoToList | ITC Live Progamming</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <nav class="navbar-nav">
         <div class="logo">
-            <a href="">ITC | Do To List</a>
+            <a href="">ITC | DoToList</a>
         </div>
-        <div class="nav-list">
+        <div class="nav-list" id="nav-list">
+            <p onclick="closeNav()" id="timesNav"><span>&times;</span></p>
             <a class="nav-link" href="./">Home</a>
             <a class="nav-link" href="./src/kegiatan.php">Kegiatan</a>
+            <p class="nav-link badge-name"><span><?= $_SESSION['username'] ?></span></p>
             <a class="btn-logout" href="./logout.php">Logout</a>
+        </div>
+        <div class="nav-responsive">
+            <p onclick="openNav()" id="hamburger"><span>=</span></p>
         </div>
     </nav>
     <section class="home">
         <div class="container">
             <h1>Selamat datang, <span><?= $_SESSION['nama'] ?></span></h1>
-            <h1>Di Do To List | ITC Live Progamming</h1>
+            <h1>Di <span>DoToList</span> | ITC Live Progamming</h1>
         </div>
     </section>
     <section class="list-kegiatan">
@@ -72,7 +77,17 @@ if (!isset($_SESSION['id_users'])) {
                 </script>
             </span></p>
     </footer>
-    <script src="./assets/js/script.js"></script>
+    <script>
+        const navList = document.getElementById("nav-list");
+
+        function closeNav() {
+            navList.style.right = "-100%";
+        }
+
+        function openNav() {
+            navList.style.right = "0";
+        }
+    </script>
 </body>
 
 </html>

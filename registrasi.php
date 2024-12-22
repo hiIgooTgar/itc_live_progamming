@@ -10,7 +10,7 @@ include "./koneksi/config.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login DoToList</title>
+    <title>Registrasi DoToList</title>
     <link rel="stylesheet" href="./assets/css/auth.css">
 </head>
 
@@ -18,7 +18,7 @@ include "./koneksi/config.php";
     <section class="registrasi-section">
         <div class="left-col">
             <form action="" method="post">
-                <h2>Registrasi Do To List</h2>
+                <h2>Registrasi DoToList</h2>
                 <h1> <span>ITC</span> | Live Progamming</h1>
                 <div class="group-input">
                     <label for="username">Username</label>

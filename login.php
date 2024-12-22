@@ -19,7 +19,7 @@ session_start()
     <section class="login-section">
         <div class="left-col">
             <form action="" method="post">
-                <h2>Login Do To List</h2>
+                <h2>Login DoToList</h2>
                 <h1> <span>ITC</span> | Live Progamming</h1>
                 <div class="group-input">
                     <label for="username">Username</label>

@@ -193,3 +193,24 @@
   background: var(--primary);
   color: #fff;
 }
+
+/* responsive */
+@media screen and (max-width: 912px) {
+  .login-section .left-col {
+    flex: 1 1 100%;
+    padding: 3rem 8%;
+  }
+
+  .login-section .right-col {
+    display: none;
+  }
+
+  .registrasi-section .left-col {
+    flex: 1 1 100%;
+    padding: 3rem 8%;
+  }
+
+  .registrasi-section .right-col {
+    display: none;
+  }
+}

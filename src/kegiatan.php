@@ -1,6 +1,8 @@
 <?php include "../koneksi/config.php";
 ?>
-<?php include "../components/header.php";
+<?php
+$title = "Kegiatan Do To List | ITC Live Progamming";
+include "../components/header.php";
 
 if (!isset($_SESSION['id_users'])) {
     echo "<script>
@@ -34,7 +36,7 @@ if (!isset($_SESSION['id_users'])) {
             $id_users = $_SESSION['id_users'];
             $query = mysqli_query($conn, "SELECT * FROM tbl_kegiatan WHERE id_users = '$id_users' ORDER BY id_kegiatan DESC");
             if (mysqli_num_rows($query) <= 0) {
-                echo "<h2>Data kegiatan kosong!</h2>";
+                echo "<div class='kt-kosong'><h2>Data kegiatan kosong!</h2></div>";
             }
             while ($data = mysqli_fetch_array($query)) {
             ?>

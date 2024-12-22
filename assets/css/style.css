@@ -138,6 +138,7 @@
 }
 
 .row-kegiatan .right-col .card .aksi {
+  flex: 1 1 15%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -239,6 +240,21 @@
   cursor: pointer;
 }
 
+.badge-name {
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  background: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+}
+
+.badge-name span {
+  color: #fff;
+}
+
 /* style input */
 .group-input {
   display: block;
@@ -293,10 +309,107 @@
   border: 1px solid var(--primary);
 }
 
+/* keterangan */
+.kt-kosong {
+  padding: 1.5rem;
+  text-align: center;
+  border: 1.5px solid var(--primary);
+}
+
 /* footer */
 footer {
   text-align: center;
   padding: 1rem 0;
   background: var(--primary);
   color: #fff;
+}
+
+/* responsive */
+@media screen and (max-width: 912px) {
+  .row-kegiatan {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 4rem 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .list-kegiatan {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .row-kegiatan .right-col .card {
+    flex-direction: column;
+  }
+  .row-kegiatan .right-col .card .list {
+    flex: 1 1 100%;
+  }
+
+  .row-kegiatan .right-col .card .aksi {
+    flex: 1 1 100%;
+  }
+}
+
+/* navbar */
+.nav-responsive {
+  display: none;
+}
+
+.nav-list #timesNav {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-nav .nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    transition: 300ms linear;
+  }
+
+  .nav-responsive {
+    display: inline-block;
+  }
+
+  .nav-responsive #hamburger {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 8px;
+  }
+
+  .nav-list #timesNav {
+    display: inline-block;
+  }
+
+  .nav-list #timesNav {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: 8%;
+    right: 8%;
+    padding-bottom: 8px;
+  }
+
+  .navbar-nav .nav-list .nav-link {
+    color: #fff;
+  }
 }
