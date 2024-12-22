@@ -12,33 +12,21 @@ session_start()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login DoToList</title>
-    <link rel="stylesheet" href="./assets/css/auth.css">
 </head>
 
 <body>
-    <section class="login-section">
-        <div class="left-col">
-            <form action="" method="post">
-                <h2>Login Do To List</h2>
-                <h1> <span>ITC</span> | Live Progamming</h1>
-                <div class="group-input">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" class="form-control" id="username" autocomplete="off" required>
-                </div>
-                <div class="group-input">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" class="form-control" id="password" autocomplete="off" required>
-                </div>
-                <button name="login" class="btn-auth" type="submit">Login</button>
-                <p class="auth-foot">Apakah anda belum punya akun? <a href="">Regitrasi</a> sekarang</p>
-            </form>
-        </div>
-        <div class="right-col">
-            <main>
-                <h1>Do To List</h1>
-                <h1>ITC | Live Progamming</h1>
-            </main>
-        </div>
+    <section class="container">
+        <form action="" method="post">
+            <div class="group-input">
+                <label for="username">Username</label>
+                <input type="text" name="username" class="form-control" id="username" autocomplete="off" required>
+            </div>
+            <div class="group-input">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" id="password" autocomplete="off" required>
+            </div>
+            <button name="login" type="submit">Login</button>
+        </form>
     </section>
 </body>
 

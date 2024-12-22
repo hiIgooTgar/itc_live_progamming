@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primary: #1f7ccd;
+}
+
+.login-section {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+}
+
+.login-section .left-col {
+  flex: 1 1 40%;
+  display: flex;
+  align-items: center;
+  padding: 3rem 5%;
+  background: #f1f1f1;
+}
+
+.login-section .left-col form {
+  width: 100%;
+}
+
+.login-section .left-col form h1 {
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-section .left-col form h1 span {
+  color: var(--primary);
+}
+
+.login-section .left-col form h2 {
+  font-size: 2rem;
+}
+
+.login-section .right-col {
+  flex: 1 1 60%;
+  padding: 3rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background: var(--primary);
+}
+
+.login-section .right-col main {
+  padding: 2rem;
+  border: 5px double #fff;
+}
+
+.login-section .right-col main h1 {
+  font-size: 2.5rem;
+}
+
+.auth-foot {
+  margin-top: 0.5rem;
+}
+
+.auth-foot a {
+  color: var(--primary);
+}
+
+/* style input */
+.group-input {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.group-input label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.group-input input {
+  display: inline-block;
+  padding: 0.65rem 0.8rem;
+  outline: none;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  border: 2px solid #000;
+  width: 100%;
+}
+
+.group-input input:focus {
+  border: 1px solid var(--primary);
+}
+
+.group-input select {
+  display: inline-block;
+  padding: 0.65rem 0.8rem;
+  outline: none;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  border: 2px solid #000;
+  width: 100%;
+}
+
+.group-input select:focus {
+  border: 1px solid var(--primary);
+}
+
+.group-input textarea {
+  display: inline-block;
+  padding: 0.65rem 0.8rem;
+  outline: none;
+  border: 2px solid #000;
+  width: 100%;
+  height: 120px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.group-input textarea:focus {
+  border: 1px solid var(--primary);
+}
+
+/* button */
+.btn-auth {
+  display: inline-block;
+  padding: 0.65rem 0.8rem;
+  outline: none;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  width: 100%;
+  font-weight: 600;
+  margin: 0.8rem 0;
+  cursor: pointer;
+}
+
+.btn-auth:hover {
+  background: var(--primary);
+  color: #fff;
+}

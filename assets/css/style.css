@@ -252,10 +252,12 @@
 
 .group-input input {
   display: inline-block;
-  padding: 0.5rem 0.7rem;
+  padding: 0.65rem 0.8rem;
   outline: none;
   border: 1px solid #000;
   width: 100%;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
 }
 
 .group-input input:focus {
@@ -264,10 +266,12 @@
 
 .group-input select {
   display: inline-block;
-  padding: 0.5rem 0.7rem;
+  padding: 0.65rem 0.8rem;
   outline: none;
   border: 1px solid #000;
   width: 100%;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
 }
 
 .group-input select:focus {
@@ -276,10 +280,12 @@
 
 .group-input textarea {
   display: inline-block;
-  padding: 0.5rem 0.7rem;
+  padding: 0.65rem 0.8rem;
   outline: none;
   border: 1px solid #000;
   width: 100%;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
   height: 120px;
 }
 
