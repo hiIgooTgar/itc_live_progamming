@@ -10,6 +10,7 @@
   --primary: #1f7ccd;
 }
 
+/* login */
 .login-section {
   width: 100%;
   height: 100dvh;
@@ -69,6 +70,56 @@
   color: var(--primary);
 }
 
+/* registrasi */
+.registrasi-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.registrasi-section .left-col {
+  flex: 1 1 40%;
+  padding: 3rem 5%;
+  background: #f1f1f1;
+}
+
+.registrasi-section .left-col form {
+  width: 100%;
+}
+
+.registrasi-section .left-col form h1 {
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.registrasi-section .left-col form h1 span {
+  color: var(--primary);
+}
+
+.registrasi-section .left-col form h2 {
+  font-size: 2rem;
+}
+
+.registrasi-section .right-col {
+  flex: 1 1 60%;
+  padding: 3rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background: var(--primary);
+}
+
+.registrasi-section .right-col main {
+  padding: 2rem;
+  border: 5px double #fff;
+}
+
+.registrasi-section .right-col main h1 {
+  font-size: 2.5rem;
+}
+
 /* style input */
 .group-input {
   display: block;
@@ -98,7 +149,7 @@
   display: inline-block;
   padding: 0.65rem 0.8rem;
   outline: none;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   letter-spacing: 1px;
   border: 2px solid #000;
   width: 100%;

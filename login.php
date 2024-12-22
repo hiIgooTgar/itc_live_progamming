@@ -30,7 +30,7 @@ session_start()
                     <input type="password" name="password" class="form-control" id="password" autocomplete="off" required>
                 </div>
                 <button name="login" class="btn-auth" type="submit">Login</button>
-                <p class="auth-foot">Apakah anda belum punya akun? <a href="">Regitrasi</a> sekarang</p>
+                <p class="auth-foot">Apakah anda belum punya akun? <a href="./registrasi.php">Regitrasi</a> sekarang</p>
             </form>
         </div>
         <div class="right-col">
